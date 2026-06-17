@@ -67,6 +67,22 @@ const projects = [
     demo: null,
     img: null,
   },
+  {
+    tag: 'PRJ_05',
+    name: 'ShrinX',
+    hook: 'drop in a PDF, get a whole study kit back.',
+    note: null,
+    bullets: [
+      'Upload any PDF and it turns the material into seven study formats: summary, notes, flashcards, MCQs, true/false, fill-in-the-blank, and Q&A',
+      'It pulls the text out, builds structured prompts for each format, and calls Claude to generate them',
+      'A Flask web app that parses and serves all of it back in one place',
+      'Built it because I wanted my own notes turned into something I could actually revise from',
+    ],
+    stack: ['Python', 'Flask', 'Claude API', 'pdfplumber'],
+    repo: 'https://github.com/shachi2511/Shrinx',
+    demo: null,
+    img: null,
+  },
 ];
 
 function Chip({ children }) {
@@ -95,17 +111,14 @@ function Card({ p, i }) {
       <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.05rem', color: 'var(--rose)', marginBottom: p.note ? '0.5rem' : '1.2rem' }}>
         {p.hook}
       </p>
-
       {p.note ? (
         <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '1px', color: 'var(--warm)', marginBottom: '1.2rem' }}>
           {p.note}
         </div>
       ) : null}
-
       {p.img ? (
         <img src={p.img} alt={p.name} style={{ width: '100%', borderRadius: '4px', border: '0.5px solid var(--border)', marginBottom: '1.25rem', display: 'block' }} />
       ) : null}
-
       <ul style={{ listStyle: 'none', margin: '0 0 1.4rem', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
         {p.bullets.map((b, j) => (
           <li key={j} style={{ display: 'flex', gap: '0.65rem', fontFamily: 'var(--font-sans)', fontSize: '0.92rem', color: 'var(--off-white)', opacity: 0.82, lineHeight: 1.65, fontWeight: 300 }}>
@@ -114,11 +127,9 @@ function Card({ p, i }) {
           </li>
         ))}
       </ul>
-
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '1.25rem' }}>
         {p.stack.map((s) => <Chip key={s}>{s}</Chip>)}
       </div>
-
       <div style={{ display: 'flex', gap: '1.25rem' }}>
         <a href={p.repo} target="_blank" rel="noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '0.4px', color: 'var(--off-white)', cursor: 'none' }}>
           code <span style={{ color: 'var(--muted)' }}>&#8599;</span>
@@ -143,13 +154,11 @@ export default function Projects() {
         projects
       </h1>
       <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', color: 'var(--off-white)', opacity: 0.85, marginTop: '1.5rem', maxWidth: '560px', lineHeight: 1.8, fontWeight: 300 }}>
-        A few of the things I&rsquo;ve built -- a sample, not the whole list.
+        A few of the things I&rsquo;ve built &mdash; a sample, not the whole list.
       </p>
-
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.25rem', marginTop: '3rem' }}>
         {projects.map((p, i) => <Card key={p.tag} p={p} i={i} />)}
       </div>
-
       <Connect />
     </div>
   );
