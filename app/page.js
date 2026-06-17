@@ -6,10 +6,10 @@ import Image from 'next/image';
 import Connect from './components/Connect';
 
 const sections = [
-  { href: '/projects', label: 'projects', desc: 'things I built',     tag: '01' },
-  { href: '/blogs',    label: 'blogs',    desc: 'tech I\u2019m into lately', tag: '02' },
-  { href: '/thoughts', label: 'thoughts', desc: 'the wall',            tag: '03' },
-  { href: '/now', label: 'now', desc: 'what I\u2019m into this month', tag: '04' },
+  { href: '/now',      label: 'now',      desc: 'what I\u2019m into this month', tag: '01' },
+  { href: '/projects', label: 'projects', desc: 'things I built',           tag: '02' },
+  { href: '/blogs',    label: 'blogs',    desc: 'tech I\u2019m into lately', tag: '03' },
+  { href: '/thoughts', label: 'thoughts', desc: 'the wall',                  tag: '04' },
 ];
 
 function Row({ s, i }) {
@@ -53,7 +53,6 @@ export default function Home() {
         >
           <Image src="/butterfly.png" alt="" width={148} height={148} style={{ objectFit: 'contain', filter: 'drop-shadow(0 0 38px rgba(200,168,178,0.45)) brightness(1.12)' }} />
         </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,25 +61,19 @@ export default function Home() {
         >
           Shachi<em style={{ fontStyle: 'italic', color: 'var(--rose)' }}> Shriwastava</em>
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '1rem', lineHeight: 1.9, color: 'var(--off-white)', opacity: 0.8, maxWidth: '440px', textAlign: 'center', marginBottom: '3.5rem' }}
         >
-          Hey, I&rsquo;m Shachi &mdash; a recent CS grad sharing my journey through
-          this field and everything it&rsquo;s led me to. This is my corner of the
-          internet for the projects I&rsquo;ve built, the ideas in my head, and
-          whatever else feels worth documenting.
+          Hey, I&rsquo;m Shachi &mdash; a recent CS grad sharing my journey through this field and everything it&rsquo;s led me to. This is my corner of the internet for the projects I&rsquo;ve built, the ideas in my head, and whatever else feels worth documenting.
         </motion.p>
-
         <div style={{ width: '100%', maxWidth: '440px' }}>
           {sections.map((s, i) => <Row key={s.href} s={s} i={i} />)}
           <div style={{ borderTop: '0.5px solid var(--border)' }} />
         </div>
       </div>
-
       <div style={{ maxWidth: '600px', width: '100%', margin: '0 auto', padding: '0 1.5rem 3rem' }}>
         <Connect />
       </div>

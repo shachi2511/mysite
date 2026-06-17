@@ -28,17 +28,16 @@ export default function RootLayout({ children }) {
 
   const links = [
     { href: '/',         label: 'home'     },
+    { href: '/now',      label: 'now'      },
     { href: '/projects', label: 'projects' },
     { href: '/blogs',    label: 'blogs'    },
     { href: '/thoughts', label: 'thoughts' },
-    { href: '/now',      label: 'now'      },
   ];
 
   return (
     <html lang="en">
       <body>
         <div ref={cursorRef} className="cursor" />
-
         <nav style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -56,7 +55,6 @@ export default function RootLayout({ children }) {
               Shachi
             </span>
           </Link>
-
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             {links.map(({ href, label }) => (
               <Link key={href} href={href} style={{
@@ -70,7 +68,6 @@ export default function RootLayout({ children }) {
             ))}
           </div>
         </nav>
-
         <main style={{ paddingTop: '56px' }}>
           {children}
         </main>
