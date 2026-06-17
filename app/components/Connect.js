@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 
 export const LINKS = {
-  email: 'shachi@example.com',
+  email: 'shachi503@gmail.com',
   github: 'https://github.com/shachi2511',
   linkedin: 'https://www.linkedin.com/in/shachi-shriwastava-81b013218/',
   substack: 'https://shachishriwastava.substack.com',
