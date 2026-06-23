@@ -6,9 +6,9 @@ import Image from 'next/image';
 import Connect from './components/Connect';
 
 const sections = [
-  { href: '/now',      label: 'now',      desc: 'what I\u2019m into this month', tag: '01' },
-  { href: '/projects', label: 'projects', desc: 'things I built',           tag: '02' },
-  { href: '/blogs',    label: 'blogs',    desc: 'tech I\u2019m into lately', tag: '03' },
+  { href: '/projects', label: 'projects', desc: 'things I built',           tag: '01' },
+  { href: '/blogs',    label: 'blogs',    desc: 'tech I\u2019m into lately', tag: '02' },
+  { href: '/uic',      label: 'uic',      desc: 'mentoring & clubs',         tag: '03' },
   { href: '/thoughts', label: 'thoughts', desc: 'the wall',                  tag: '04' },
 ];
 

@@ -6,6 +6,12 @@ import Connect, { LINKS } from '../components/Connect';
 const posts = [
   {
     date: 'Jun 2026',
+    title: 'The Strange Gap Between Building AI and Understanding It',
+    blurb: 'Even the people building these models can\u2019t fully explain how they work. A look at why AI is grown more than built, and how researchers are starting to read its mind.',
+    href: 'https://shachishriwastava.substack.com/p/the-strange-gap-between-building-ai',
+  },
+  {
+    date: 'Jun 2026',
     title: 'If AI Is So Smart, Why Does It Forget?',
     blurb: 'The hidden memory problem behind long conversations: why models lose track of the middle of what you tell them, and why memory is really about retrieval, not storage.',
     href: 'https://shachishriwastava.substack.com/p/if-ai-is-so-smart-why-does-it-forget',

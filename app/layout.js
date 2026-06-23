@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
 
   const links = [
     { href: '/',         label: 'home'     },
-    { href: '/now',      label: 'now'      },
     { href: '/projects', label: 'projects' },
     { href: '/blogs',    label: 'blogs'    },
+    { href: '/uic',      label: 'uic'      },
     { href: '/thoughts', label: 'thoughts' },
   ];
 
