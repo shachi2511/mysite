@@ -6,9 +6,15 @@ import Connect, { LINKS } from '../components/Connect';
 const posts = [
   {
     date: 'Jun 2026',
+    title: 'Four Years of Will Smith Eating Spaghetti',
+    blurb: 'How the internet\u2019s silliest AI test - generating the same Will Smith clip every year quietly became one of the clearest ways to watch generative video go from melting faces to believable physics.',
+    href: 'https://substack.com/home/post/p-204348667',
+  },
+  {
+    date: 'Jun 2026',
     title: 'The Strange Gap Between Building AI and Understanding It',
     blurb: 'Even the people building these models can\u2019t fully explain how they work. A look at why AI is grown more than built, and how researchers are starting to read its mind.',
-    href: 'https://shachishriwastava.substack.com/p/the-strange-gap-between-building-ai',
+    href: 'https://substack.com/home/post/p-203158266',
   },
   {
     date: 'Jun 2026',
